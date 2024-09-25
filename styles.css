@@ -1,1 +1,47 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 
+{
+  box-sizing: border-box;
+}
+
+.column.left{
+  float: left;
+  width: 25%;
+  height: 1000px;
+}
+
+.column.right{
+  float: left;
+  width: 75%;
+  height: 1000px;
+}
+
+.row:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.header{
+  background-color: #ffd699;
+  padding: 24px;
+  text-align: center;
+}
+
+.header a{
+  text-align: left;
+}
+
+.footer{
+  background-color: #ffd699;
+  padding: 18px;
+  text-align: center;
+}
+
+ul{
+  display: inline-block;
+  margin: 0 10px;
+}
