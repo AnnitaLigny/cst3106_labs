@@ -1,0 +1,123 @@
+/* Body styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F5F5F5; 
+    color: #333333; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Game board styles */
+.game-board {
+    background-color: white; 
+    border: 2px solid #B0BEC5;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px; 
+    text-align: center;
+}
+
+/* Container for dice */
+.dice-container {
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+
+/* Dice styles */
+.dice {
+    margin: 10px;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #FFFFFF; 
+    border: 1px solid #333333; 
+    border-radius: 15px; 
+}
+
+.dice .middle {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.dice .top-left {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.dice .bottom-right {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+.dice .top-right {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.dice .bottom-left {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+/* Dot styles */
+.dot {
+    background-color: black; 
+    border-radius: 50%;
+    width: 20px;
+    height: 20px; 
+}
+
+/* Scorecard styles */
+.scorecard {
+    background-color: #FFFFFF; 
+    border: 1px solid #B0BEC5; 
+    border-radius: 10px;
+    padding: 15px;
+    width: 300px; 
+    margin-top: 20px;
+}
+
+/* Scorecard table styles */
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+th, td {
+    padding: 10px; 
+    text-align: center;
+    border-bottom: 1px solid #B0BEC5;
+}
+
+th {
+    background-color: #B0BEC5; 
+    color: white; 
+}
+
+/* Headings and subheadings */
+h1 {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 24px; 
+    font-weight: bold; 
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 18px; 
+    font-weight: 500; 
+}
+
+h3 {
+    font-family: 'Roboto', sans-serif; 
+    font-size: 18px; 
+    font-weight: 500; 
+}
