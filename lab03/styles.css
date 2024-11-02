@@ -1,45 +1,103 @@
-*{
-  box-sizing: border-box;
+/* Basic styling for the resume */
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f7f7f7;
 }
 
-.column.left{
-  float: left;
-  width: 25%;
-  height: 1000px;
-  background-color: #e6e6e6;
+header, nav, section, article, aside, footer {
+    margin: 2vh 2vw;
+    padding: 1vh 1vw;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    box-sizing: border-box;
 }
 
-.column.right{
-  float: left;
-  width: 75%;
-  height: 1000px;
+header {
+    background-color: rgba(245, 245, 245, 0.9);
+    text-align: center;
+    border-bottom: 2px solid #ddd;
 }
 
-.row:after{
-  content: "";
-  display: table;
-  clear: both;
+header h1 {
+    margin: 0;
+    color: #444;
+    font-family: 'Trebuchet MS', sans-serif;
 }
 
-.header{
-  background-color: #ffd699;
-  padding: 24px;
-  text-align: center;
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5em 0;
 }
 
-.header a{
-  text-align: left;
-  font-size: 18px;
-  font-weight: bold;
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
 }
 
-.footer{
-  background-color: #ffd699;
-  padding: 18px;
-  text-align: center;
+nav li {
+    margin: 0 15px;
 }
 
-ul{
-  display: inline-block;
-  margin: 0 10px;
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #555;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+section {
+    padding: 1em;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+h1, h2, h3 {
+    color: #333;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5em;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 3em;
+    padding: 2em 0;
+    background-color: rgba(245, 245, 245, 0.9);
+    border-top: 1px solid #ddd;
 }
