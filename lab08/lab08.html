@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Dice Roller</title>
+    <style>
+        /* Styling for the game container */
+        .game-container {
+            width: 400px;
+            text-align: center;
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Styling for the dice container */
+        .dice-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Base styling for a dice */
+        .dice {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #FFFFFF;
+            border: 2px solid #A0A0A0;
+            border-radius: 10px;
+            margin: 10px;
+        }
+        
+        /* Styling for the dice dots */
+        .dot {
+            background-color: #333333;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+        }
+        
+        /* Positions for the dots on the dice face */
+        .middle { top: 40px; left: 40px; }
+        .top-left { top: 5px; left: 5px; }
+        .bottom-right { bottom: 5px; right: 5px; }
+        .top-right { top: 5px; right: 5px; }
+        .bottom-left { bottom: 5px; left: 5px; }
+        .middle-left { top: 40px; left: 5px; }
+        .middle-right { top: 40px; right: 5px; }
+        
+        /* Styling for the roll button */
+        button {
+            background-color: #B0BEC5;
+            color: #333333;
+            font-size: 14px;
+            font-weight: 500;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <div class="dice-container">
+            <!-- Placeholder for the dice, where dots will be dynamically added -->
+            <div class="dice" id="dice-1"></div>
+        </div>
+        <!-- Button to roll the dice -->
+        <button class="roll-button" id="roll-button">Roll Dice</button>
+    </div>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        // Define the dot positions for each dice face (1-6)
+        const diceFaces = {
+            1: ['middle'],
+            2: ['top-left', 'bottom-right'],
+            3: ['top-left', 'middle', 'bottom-right'],
+            4: ['top-left', 'top-right', 'bottom-left', 'bottom-right'],
+            5: ['top-left', 'top-right', 'middle', 'bottom-left', 'bottom-right'],
+            6: ['top-left', 'top-right', 'middle-left', 'middle-right', 'bottom-left', 'bottom-right']
+        };
+
+        /**
+         * Function to roll the dice and display a random face
+         * @param {jQuery} diceElement - The jQuery element representing the dice
+         */
+        function rollDice(diceElement) {
+            // Generate a random number between 1 and 6
+            const randomFace = Math.floor(Math.random() * 6) + 1;
+            // Display the corresponding dice face
+            displayDiceFace(diceElement, randomFace);
+        }
+
+        /**
+         * Function to display a specified dice face by adding dot elements
+         * @param {jQuery} diceElement - The jQuery element representing the dice
+         * @param {number} face - The number representing the dice face (1-6)
+         */
+        function displayDiceFace(diceElement, face) {
+            // Clear any existing dots from the dice element
+            diceElement.empty();
+            // Add dot elements based on the specified face layout
+            diceFaces[face].forEach(position => {
+                // Append a dot at each specified position
+                diceElement.append(`<div class="dot ${position}"></div>`);
+            });
+        }
+
+        // Wait until the document is ready
+        $(document).ready(() => {
+            // Attach a click event listener to the roll button
+            $('#roll-button').click(() => {
+                // Call rollDice on the dice element to simulate the roll
+                rollDice($('#dice-1'));
+            });
+        });
+    </script>
+</body>
+</html>
