@@ -10,7 +10,7 @@ The `Patients` entity stores relevant data about individuals seeking medical att
   - `first_name` (VARCHAR): The first name of the patient.
   - `last_name` (VARCHAR): The last name of the patient.
   - `dob` (DATE): The birthdate of the patient.
-  - `sex` (CHAR(1)): The gender of the patient (e.g., M/F).
+  - `gender` (CHAR(1)): The gender of the patient (e.g., M/F).
   - `contact_info` (VARCHAR): Contact details for the patient.
   - `triage_time` (TIMESTAMP): The time when the patient was triaged.
   - `medical_issue` (VARCHAR): A description of the patient's medical issue.
@@ -34,7 +34,8 @@ The `Rooms` entity stores information about the available rooms in the hospital 
   - `doctor_assigned` (VARCHAR): The name of the doctor assigned to the room.
   - `room_status` (VARCHAR): The status of the room (e.g., Available, Occupied).
 
----
+##  **Database ERD (Entity-Relationship Diagram)**
+![Database Schema](schema.png)
 
 ## 2. Relationships
 
